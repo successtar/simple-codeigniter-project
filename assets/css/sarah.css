@@ -1,0 +1,803 @@
+/*
+Project:	   Sarah - Bootstrap Administrator Template .
+Created by:    Ravi Jaiswal
+
+[TABLE OF CONTENTS]
+
+1.  IMPORTS
+2.  RESET STYLES
+3.  HEADER STYLES
+4.  MAIN THEME CONTAINER STYLES
+    4.1 LEFT PANEL STYLES
+    4.2 CONTENT SECTION STYLES
+	4.3 MINIMIZED LEFT PANEL STYLE
+	4.4 THEME STYLE ACCORDING PHONE
+5.	Boxed Theme Layout Style
+6.	Theme Background Color Style
+*/
+
+
+/********** 1. IMPORTS **********/
+/********************************/
+@import url('sarah-overlay-effect.css');
+@import url('sarah-push-effect.css');
+@import url('sarah-shrink-effect.css');
+@import url('sarah-rightsidebar.css');
+@import url('sarah-horizontal-navigation.css');
+@import url('sarah-theme-color.css');
+@import url('extra.css');
+@import url('header.css');
+/********** 2. RESET STYLES **********/
+/*************************************/
+
+/* ********** Default Theme Style************* */
+body,html {
+    
+}
+body{position:relative;}
+#sarahapp-wrapper a:focus {
+    outline: none;
+}
+#sarahapp-wrapper {
+    background: #eef1f6;
+    color: #7e7e7e;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+	font-family: "lato", sans-serif;
+	direction: ltr;
+    line-height: 20px;
+    font-size: 13px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+	width: 100%;
+	margin: 0;
+    padding: 0;
+}
+ 
+/************** 3. Theme Header Style Start Here ********************/
+
+#sarah-header {
+    background: #fff none repeat scroll 0 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 50px;
+    z-index: 10;
+	box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+}
+.sarah-left-header {
+    background: #3498db;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 50px;
+    position: absolute;
+    float: left;
+    text-align: center;
+    width: 230px;
+    z-index: 999;
+	box-shadow:0 1px 4px 0 rgba(0, 0, 0, 0.2);
+}
+.sarah-left-header a {
+    color: #FFF;
+}
+.sarah-left-header a:hover,
+.sarah-left-header a:focus {
+    color: #FFF;
+    text-decoration: none;
+}
+.sarah-left-header a i {
+    color: #003c70;
+    font-size: 22px;
+    position: relative;
+    top: 3px;
+}
+.sarah-right-header {
+    background: #fff none repeat scroll 0 0;
+    height: 50px;
+    line-height: 50px;
+    z-index: 101;
+	margin-left: 230px;
+	position: relative;
+}
+.sarah-right-header > ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+.sarah-right-header li {
+  display: inline;
+  float: left;
+}
+.sarah-right-header > li  a {
+    color: #7e7e7e;
+    padding: 17px 15px;
+}
+.sarah-right-header li a:hover,
+.sarah-right-header li a:focus {
+    background: #efefef;
+    text-decoration: none;
+}
+.sarah-right-header a i {
+    color: #7e7e7e;
+    font-size: 14px;
+}
+.right-navbar {
+    float: right;
+	padding-right: 7px !important;
+}
+.right-navbar li a i {
+    font-size: 14px;
+}
+.left-navbar > li:first-child {
+    padding-left: 50px;
+}
+.sarah-sidebar-toggle a:after {
+    background: transparent;
+    border: 0px solid #efefef;
+    content: "\f0c9";
+    font-family: FontAwesome;
+    font-size: 14px;
+    line-height: 50px;
+    padding: 0px 17px;
+    position: absolute;
+    color: #7e7e7e;
+    z-index: 1000;
+}
+.sarah-sidebar-toggle a:hover:after {
+    background: #efefef;
+}
+.sarah-left-header > .sarah-sidebar-toggle > a {
+    display: none
+}
+#sarah-header .sarah-left-header[sarah-position-type="relative"] {
+    position: relative;
+}
+#sarah-header .sarah-left-header[sarah-position-type="absolute"] {
+    position: absolute;
+}
+#sarah-header .sarah-left-header[sarah-position-type="fixed"] {
+    position: fixed;
+}
+#sarah-header .sarah-right-header[sarah-position-type="relative"] {
+    position: relative;
+}
+#sarah-header .sarah-right-header[sarah-position-type="absolute"] {
+    position: absolute;
+}
+#sarah-header .sarah-right-header[sarah-position-type="fixed"] {
+	padding-right: 230px;
+    position: fixed;
+    width: 100%;
+}
+/*******************************Theme Header Style Close Here ***********************************/
+/******************************* 4. main container Style start Here ***********************************/
+#sarahapp-container {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 1000px;
+	position:relative;
+}
+/************************* 4.1 Theme Left Panel Style Start Here *********************************/
+#sarah-left-panel {
+    background: #FFF none repeat scroll 0 0;
+    color: #7e7e7e;
+    width: 230px;
+    top: 0;
+	position:absolute;
+	float:left;
+	min-height:100%;
+    z-index: 100;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+}
+#sarah-left-panel .profile-box {
+    border-bottom: 1px solid #efefef;
+    min-height: 50px;
+    padding: 5px 15px;
+    position: relative;
+}
+#sarah-left-panel .profile-box .media a img {
+    width: 40px;
+    height: 40px;
+}
+
+#sarah-left-panel .profile-box .media {
+    position: relative;
+}
+#sarah-left-panel .profile-box .media a {
+    margin-top: 2px;
+}
+#sarah-left-panel .profile-box .media a > img {
+    border: 1px solid #efefef;
+}
+ 
+
+#sarah-left-panel ul {
+    margin: 0;
+    padding: 0;
+}
+#sarah-left-panel .nav-level {
+    padding: 5px 15px;
+    border-top: 1px solid #efefef;
+    font-weight: bold;
+}
+#sarah-left-panel .panel-list > li.sarah-has-menu > ul.sarah-sub-menu {
+  list-style: none;}
+
+#sarah-left-panel .nav-level:first-child {
+    border-top: 0px solid #efefef;
+}
+#sarah-left-panel .panel-list > li > a {
+    background: #FFF;
+    border-top: 1px solid #efefef;
+    color: #7e7e7e;
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 10px 10px;
+    position: relative;
+}
+#sarah-left-panel .panel-list > li:last-child > a {
+    border-bottom: 1px solid #efefef;
+}
+#sarah-left-panel .panel-list > li:first-child > a {
+    border-top: 0px solid #efefef;
+}
+#sarah-left-panel .panel-list > li > a:hover,
+#sarah-left-panel .panel-list > li > a:focus {
+    color: #000;
+    background: #f1f1f1;
+}
+#sarah-left-panel .panel-list > li.active > a {
+    background: #f1f1f1;
+    border-top: 1px solid #efefef;
+    color: #000;
+}
+#sarah-left-panel .panel-list > li > a > i {
+    display: inline;
+    font-size: 14px;
+    padding-right: 6px;
+}
+#sarah-left-panel .panel-list > li > a span.menu-text {
+    display: inline-block;
+}
+#sarah-left-panel .panel-list > li.sarah-has-menu > a:after {
+    font-family: FontAwesome;
+    content: "\f107";
+    font-size: 15px;
+    position: relative;
+    float: right;
+}
+#sarah-left-panel .panel-list > li.sarah-has-menu.opened > a {
+    background: #f1f1f1;
+    color: #000;
+}
+#sarah-left-panel .panel-list > li.sarah-has-menu.opened > a:after {
+    font-family: FontAwesome;
+    content: "\f106" !important;
+    font-size: 15px;
+    float: right;
+    position: relative;
+}
+#sarah-left-panel .panel-list > li.sarah-has-menu li.sarah-has-menu > a:after {
+    font-family: FontAwesome;
+    content: "\f103";
+    font-size: 15px;
+    position: relative;
+    float: right;
+}
+#sarah-left-panel .panel-list > li.sarah-has-menu li.sarah-has-menu.opened > a:after {
+    font-family: FontAwesome;
+    content: "\f102";
+    font-size: 15px;
+    position: relative;
+    float: right;
+}
+#sarah-left-panel .panel-list ul {
+    background: #fafafa;
+    box-shadow: -1px 2px 3px 0px rgba(0, 0, 0, 0.2);
+}
+#sarah-left-panel .panel-list ul.sarah-sub-menu li > a {
+    background: transparent;
+    border-top: 1px solid #efefef;
+    color: #7e7e7e;
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 10px 10px;
+    position: relative;
+}
+#sarah-left-panel .panel-list > li.sarah-has-menu > ul.sarah-sub-menu {
+    display: none;
+}
+#sarah-left-panel .panel-list li.sarah-has-menu > ul.sarah-sub-menu li > a:hover,
+#sarah-left-panel .panel-list li.sarah-has-menu > ul.sarah-sub-menu li > a:focus {
+    text-decoration: none;
+    color: #000;
+    background: #f1f1f1;
+}
+#sarah-left-panel .panel-list > li.sarah-has-menu > ul ul {
+    display: none;
+}
+#sarah-left-panel .panel-list > li.sarah-has-menu.opened > ul {
+    display: block;
+}
+#sarah-left-panel .panel-list > li.sarah-has-menu.opened > ul > li.sarah-has-menu.opened > ul {
+    display: block;
+}
+#sarah-left-panel .panel-list > li.sarah-has-menu.opened > ul > li.sarah-has-menu.opened > ul > li.sarah-has-menu.opened > ul {
+    display: block;
+}
+
+#sarah-left-panel .panel-list > li.sarah-has-menu.active > ul {
+    display: block;
+}
+#sarah-left-panel .panel-list > li.sarah-has-menu.active > ul > li.sarah-has-menu.active > ul {
+    display: block;
+}
+#sarah-left-panel .panel-list > li.sarah-has-menu.active > ul > li.sarah-has-menu.active > ul > li.sarah-has-menu.active > ul {
+    display: block;
+}
+#sarah-left-panel .panel-list > li.sarah-has-menu > ul > li > a span.menu-text {
+    padding-left: 15px;
+    position: relative;
+}
+#sarah-left-panel .panel-list > li.sarah-has-menu > ul.sarah-sub-menu {
+
+  list-style: outside none none;
+}
+#sarah-left-panel .panel-list > li.sarah-has-menu  li.sarah-has-menu > ul.sarah-sub-menu {
+
+  list-style: outside none none;
+}
+#sarah-left-panel .panel-list > li.sarah-has-menu > ul.sarah-sub-menu {
+
+  list-style: outside none none;
+
+}
+#sarah-left-panel .panel-list > li.sarah-has-menu > ul > li.sarah-has-menu > ul > li > a span.menu-text {
+    padding-left: 25px;
+    position: relative;
+}
+#sarah-left-panel .panel-list > li.sarah-has-menu > ul > li.sarah-has-menu > ul > li > ul > li > a span.menu-text {
+    padding-left: 35px;
+    position: relative;
+}
+#sarah-left-panel .panel-list > li.sarah-has-menu > ul > li.sarah-has-menu > ul > li > ul > li > ul > li > a span.menu-text {
+    padding-left: 40px;
+    position: relative;
+}
+#sarah-left-panel .panel-list > li.sarah-has-menu > ul.sarah-sub-menu > li > a span.menu-text:before {
+    font-family: FontAwesome;
+    content: "\f0da";
+    font-size: 14px;
+    position: relative;
+    float: left;
+    left: 4px;
+}
+#sarah-left-panel .panel-list > li.sarah-has-menu > ul.sarah-sub-menu > li.sarah-has-menu > ul.sarah-sub-menu > li > a span.menu-text:before {
+    font-family: FontAwesome;
+    content: "\f0da";
+    font-size: 12px;
+    position: relative;
+    float: left;
+    left: 15px;
+}
+#sarah-left-panel .panel-list > li.sarah-has-menu > ul.sarah-sub-menu > li.sarah-has-menu > ul.sarah-sub-menu > li > a span.menu-text:before {
+    font-family: FontAwesome;
+    content: "\f0da";
+    font-size: 14px;
+    position: relative;
+    float: left;
+    left: 18px;
+}
+#sarah-left-panel .panel-list > li.sarah-has-menu > ul.sarah-sub-menu > li.sarah-has-menu > ul.sarah-sub-menu > li.sarah-has-menu > ul.sarah-sub-menu > li > a span.menu-text:before {
+    font-family: FontAwesome;
+    content: "\f0da";
+    font-size: 12px;
+    position: relative;
+    float: left;
+    left: 30px;
+}
+#sarah-left-panel .panel-list li.active > a .selected {
+    border-bottom: 7px solid transparent;
+    border-right: 7px solid #7e7e7e;
+    border-top: 7px solid transparent;
+    display: inline-block;
+    height: 0;
+    position: absolute;
+    right: 0;
+    top: 13px;
+    vertical-align: middle;
+    width: 0;
+}
+#sarah-left-panel .panel-list li.sarah-has-menu.active > a .selected {
+    display: none;
+}
+#sarah-left-panel .panel-list li a .label {
+    border-radius: 0.25em;
+    color: #7e7e7e;
+    display: inline;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    padding: 4px 3px;
+    position: absolute;
+    right: 10px;
+    text-align: center;
+    vertical-align: baseline;
+    white-space: nowrap;
+}
+.sul {
+    background-color: #ebebeb;
+}
+
+#sarah-left-panel[sarah-position-type="relative"] {
+    position: relative;
+}
+#sarah-left-panel[sarah-position-type="absolute"] {
+    position: absolute;
+}
+#sarah-left-panel[sarah-position-type="fixed"] {
+    position: fixed;
+	top:50px;
+}
+
+/********************************** Theme Left Panel Style Close Here ******************************/
+/*************************** 4.2 Theme Content Section Style Start Here ********************************/
+#main-content {
+    margin-left: 230px;
+	position:relative;
+}
+/******************* Theme Content Section Style Close Here *******************************/
+/****************** 4.3 Minimized Left Panel Style Start Here *********************************/
+#sarah-header.sarah-minimized-lpanel > .sarah-right-header[sarah-position-type="fixed"] {
+  margin-left: 50px;
+  padding-right: 50px;
+}
+#sarah-header.sarah-minimized-lpanel > .sarah-left-header {
+    width: 50px;
+}
+#sarah-header.sarah-minimized-lpanel > .sarah-left-header > a > span {
+    display: none;
+}
+#sarah-header.sarah-minimized-lpanel > .sarah-right-header {
+  margin-left: 50px;
+  padding-right:0px;
+}
+.sarah-minimized-lpanel #sarah-left-panel {
+    width: 50px;
+}
+.sarah-minimized-lpanel #sarah-left-panel .profile-box {
+    border-bottom: 0px solid #efefef;
+}
+.sarah-minimized-lpanel #sarah-left-panel .media-body {
+    display: none;
+}
+.sarah-minimized-lpanel #sarah-left-panel .profile-box {
+    padding: 5px;
+}
+.sarah-minimized-lpanel #sarah-left-panel .nav-level {
+    display: none;
+}
+.sarah-minimized-lpanel #sarah-left-panel .panel-list > li > a span.menu-text {
+    display: none;
+}
+.sarah-minimized-lpanel #sarah-left-panel .panel-list > li.sarah-has-menu > a:after {
+    display: none;
+}
+.sarah-minimized-lpanel #sarah-left-panel .panel-list > li > a > i {
+    display: inline;
+    font-size: 15px;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+.sarah-minimized-lpanel #sarah-left-panel .panel-list > li:hover > a,
+.sarah-minimized-lpanel #sarah-left-panel .panel-list > li:focus > a {
+    display: block;
+    position: relative;
+    width: 230px;
+    margin-bottom: -1px;
+    border-radius: 0px 4px 4px 0px;
+}
+.sarah-minimized-lpanel #sarah-left-panel .panel-list > li:hover > a,
+.sarah-minimized-lpanel #sarah-left-panel .panel-list > li:focus > a {
+    border-radius: 0px 4px 4px 0px;
+}
+.sarah-minimized-lpanel #sarah-left-panel .panel-list > li.sarah-has-menu:hover > a,
+.sarah-minimized-lpanel #sarah-left-panel .panel-list > li.sarah-has-menu:focus > a {
+    border-radius: 0px 4px 0px 0px;
+    background: #f1f1f1;
+}
+.sarah-minimized-lpanel #sarah-left-panel .panel-list > li:hover > a span.menu-text,
+.sarah-minimized-lpanel #sarah-left-panel .panel-list > li:focus > a span.menu-text {
+    display: inline-block;
+    position: absolute;
+    left: 52px;
+}
+.sarah-minimized-lpanel #sarah-left-panel .panel-list ul.sarah-sub-menu li {
+    list-style: none;
+}
+
+.sarah-minimized-lpanel #sarah-left-panel .panel-list > li.sarah-has-menu > ul.sarah-sub-menu {
+    display: none !important;
+    position: absolute;
+    left: 50px;
+    width: 180px;
+}
+.sarah-minimized-lpanel #sarah-left-panel .panel-list > li.sarah-has-menu:hover > ul.sarah-sub-menu,
+.sarah-minimized-lpanel #sarah-left-panel .panel-list > li.sarah-has-menu:focus > ul.sarah-sub-menu {
+    display: block !important;
+    border-right: 1px solid #efefef;
+	width: 180px;
+	left: 50px;
+}
+.sarah-minimized-lpanel #sarah-left-panel .panel-list > li.sarah-has-menu > ul.sarah-sub-menu ul.sarah-sub-menu {
+    display: none !important;
+    position: absolute;
+    width: 180px;
+    left: 0;
+}
+.sarah-minimized-lpanel #sarah-left-panel .panel-list > li.sarah-has-menu:hover > ul.sarah-sub-menu ul.sarah-sub-menu,
+.sarah-minimized-lpanel #sarah-left-panel .panel-list > li.sarah-has-menu:focus > ul.sarah-sub-menu ul.sarah-sub-menu {
+    display: none !important;
+    left: 0px;
+}
+.sarah-minimized-lpanel #sarah-left-panel .panel-list > li.sarah-has-menu > ul.sarah-sub-menu > li.sarah-has-menu:hover > ul.sarah-sub-menu,
+.sarah-minimized-lpanel #sarah-left-panel .panel-list > li.sarah-has-menu > ul.sarah-sub-menu > li.sarah-has-menu:focus > ul.sarah-sub-menu {
+    display: block !important;
+    position: relative;
+    left: 0px;
+}
+.sarah-minimized-lpanel #sarah-left-panel .panel-list > li.sarah-has-menu > ul.sarah-sub-menu > li.sarah-has-menu > ul.sarah-sub-menu > li.sarah-has-menu:hover > ul.sarah-sub-menu,
+.sarah-minimized-lpanel #sarah-left-panel .panel-list > li.sarah-has-menu > ul.sarah-sub-menu > li.sarah-has-menu > ul.sarah-sub-menu > li.sarah-has-menu:focus > ul.sarah-sub-menu {
+    display: block !important;
+    position: relative;
+    left: 0px;
+}
+
+.sarah-minimized-lpanel #sarah-left-panel .panel-list > li.sarah-has-menu li.sarah-has-menu > a:after {
+    display: none;
+}
+.sarah-minimized-lpanel #sarah-left-panel .panel-list > li.sarah-has-menu li.sarah-has-menu > a:after {
+    font-family: FontAwesome;
+    content: "\f103";
+    font-size: 15px;
+    position: relative;
+    float: right;
+    display: block;
+}
+.sarah-minimized-lpanel #sarah-left-panel .panel-list > li.sarah-has-menu li.sarah-has-menu:hover > a:after,
+.sarah-minimized-lpanel #sarah-left-panel .panel-list > li.sarah-has-menu li.sarah-has-menu:focus > a:after {
+    font-family: FontAwesome;
+    content: "\f102";
+    font-size: 15px;
+    position: relative;
+    float: right;
+    display: block;
+}
+.sarah-minimized-lpanel #sarah-left-panel .panel-list li.sarah-has-menu.active > li.active a .selected {
+    display: block;
+}
+.sarah-minimized-lpanel #sarah-left-panel .panel-list > li.active:hover > a .selected,
+.sarah-minimized-lpanel #sarah-left-panel .panel-list > li.active:focus > a .selected {
+    display: none;
+}
+.sarah-minimized-lpanel #sarah-left-panel .panel-list > li.sarah-has-menu > ul.sarah-sub-menu > li.sarah-has-menu > ul.sarah-sub-menu li > a span.menu-text {
+    padding-left: 15px;
+    position: relative;
+}
+.sarah-minimized-lpanel #sarah-left-panel .panel-list > li.sarah-has-menu > ul.sarah-sub-menu > li.sarah-has-menu > ul.sarah-sub-menu > li > a span.menu-text:before {
+    left: 4px;
+}
+.sarah-minimized-lpanel #sarah-left-panel .panel-list > li.sarah-has-menu > ul.sarah-sub-menu > li.sarah-has-menu > ul.sarah-sub-menu > li.sarah-has-menu > ul.sarah-sub-menu > li > a span.menu-text:before {
+    left: 4px;
+}
+.sarah-minimized-lpanel #sarah-left-panel .panel-list li .label {
+    display: none;
+}
+.sarah-minimized-lpanel #sarah-left-panel .panel-list li:hover a .label {
+    display: block;
+    position: absolute;
+    right: 5px;
+    top: 10px;
+}
+.sarah-minimized-lpanel #sarah-left-panel .panel-list > li.sarah-has-menu.opened > a {
+    background: #f1f1f1;
+    color: #000;
+}
+.sarah-minimized-lpanel #main-content {
+    margin-left: 50px;
+}
+/****************** Minimized Left Panel Style Start Here *********************************/
+
+/******************* 4.4 Theme Style for Phone start here***************************************/
+ 
+#sarahapp-wrapper[sarah-device-type="phone"].sarah-hide-lpanel #sarah-left-panel {
+    display: none;
+}
+#sarahapp-wrapper[sarah-device-type="phone"] #sarah-header{
+    position:none;
+	height:100px;
+}
+#sarahapp-wrapper[sarah-device-type="phone"] .sarah-left-header {
+    width: 100%;
+    float: none;
+}
+#sarahapp-wrapper[sarah-device-type="phone"] #sarah-left-panel[sarah-position-type="fixed"] {
+  top: 100px;
+}
+#sarahapp-wrapper[sarah-device-type="phone"] .sarah-right-header {
+    width: 100%;
+	padding-left: 0px !important;
+	position: relative;
+	z-index: 999;
+	top: 50px;
+}
+#sarahapp-wrapper[sarah-device-type="phone"].sarah-hide-lpanel #sarah-left-panel {display:none;}
+#sarahapp-wrapper[sarah-device-type="phone"].sarah-hide-lpanel .sarah-right-header {
+  margin-left: 0px;
+}
+#sarahapp-wrapper[sarah-device-type="phone"] .sarah-right-header {
+  margin-left: 0px;
+}
+
+#sarahapp-wrapper[sarah-device-type="phone"] #sarah-left-panel {
+    display: block;
+    z-index: 1024;
+}
+#sarahapp-wrapper[sarah-device-type="phone"] #main-content {
+    margin-left: 0px;
+}
+
+
+
+#sarahapp-wrapper[sarah-device-type="phone"] .sarah-left-header > .sarah-sidebar-toggle > a {
+    display: block;
+}
+#sarahapp-wrapper[sarah-device-type="phone"] #sarah-header > .sarah-right-header .sarah-sidebar-toggle a:after {
+    display: none !important;
+}
+#sarahapp-wrapper[sarah-device-type="desktop"] .sarah-left-header .sarah-sidebar-toggle a:after {
+    display: none !important;
+}
+#sarahapp-wrapper[sarah-device-type="tablet"] .sarah-left-header .sarah-sidebar-toggle a:after {
+    display: none !important;
+}
+#sarahapp-wrapper[sarah-device-type="phone"] .sarah-left-header .sarah-sidebar-toggle a:after {
+    background: transparent;
+    border-radius: 4px;
+    content: "";
+    font-family: FontAwesome;
+    font-size: 16px;
+    left: 5px;
+    line-height: 39px;
+    padding: 1px 13px;
+    position: absolute;
+    top: 3px;
+    z-index: 1000;
+    display: block !important;
+    color: #003c70;
+    border: 0px solid #003c70;
+    font-size: 14px;
+}
+#sarahapp-wrapper[sarah-device-type="phone"].sarah-hide-lpanel  #sarahapp-container[sarah-lpanel-effect="shrink"] #main-content {
+  margin-left: 0px;
+}
+#sarahapp-wrapper[sarah-device-type="phone"]  #sarahapp-container[sarah-lpanel-effect="shrink"] #main-content {
+  margin-left: 230px;
+}
+#sarahapp-wrapper[sarah-device-type="phone"].sarah-hide-lpanel  #sarahapp-container[sarah-lpanel-effect="overlay"] #main-content {
+   margin-left: 0px;
+}
+#sarahapp-wrapper[sarah-device-type="phone"]  #sarahapp-container[sarah-lpanel-effect="overlay"] #main-content {
+   margin-left: 0px;
+}
+#sarahapp-wrapper[sarah-device-type="phone"].sarah-hide-lpanel  #sarahapp-container[sarah-lpanel-effect="push"] #main-content {
+   margin-left: 0px;
+   margin-right: 0px;
+}
+#sarahapp-wrapper[sarah-device-type="phone"]  #sarahapp-container[sarah-lpanel-effect="push"] #main-content {
+   margin-left: 230px;
+   margin-right:-230px;
+}
+#sarahapp-wrapper[sarah-device-type="phone"].sarah-hide-lpanel #sarah-header[sarah-lpanel-effect="shrink"] .sarah-right-header[sarah-position-type="relative"] {
+    margin-left: 0px;
+	padding-right: 0;
+}
+#sarahapp-wrapper[sarah-device-type="phone"].sarah-hide-lpanel #sarah-header[sarah-lpanel-effect="shrink"] .sarah-right-header[sarah-position-type="fixed"] {
+    margin-left: 0px;
+	padding-right: 0;
+}
+#sarahapp-wrapper[sarah-device-type="phone"] #sarah-header[sarah-lpanel-effect="shrink"] .sarah-right-header[sarah-position-type="relative"] {
+    margin-left: 0px;
+	padding-right: 0;
+}
+#sarahapp-wrapper[sarah-device-type="phone"] #sarah-header[sarah-lpanel-effect="shrink"] .sarah-right-header[sarah-position-type="fixed"] {
+    margin-left: 0px;
+	padding-right: 0;
+}
+#sarahapp-wrapper[sarah-device-type="phone"].sarah-hide-lpanel #sarah-header[sarah-lpanel-effect="overlay"] .sarah-right-header[sarah-position-type="relative"] {
+    margin-left: 0px;
+	padding-right: 0;
+}
+#sarahapp-wrapper[sarah-device-type="phone"].sarah-hide-lpanel #sarah-header[sarah-lpanel-effect="overlay"] .sarah-right-header[sarah-position-type="fixed"] {
+    margin-left: 0px;
+	padding-right: 0;
+}
+#sarahapp-wrapper[sarah-device-type="phone"]#sarah-header[sarah-lpanel-effect="overlay"] .sarah-right-header[sarah-position-type="relative"] {
+    margin-left: 0px;
+	padding-right: 0;
+}
+#sarahapp-wrapper[sarah-device-type="phone"] #sarah-header[sarah-lpanel-effect="overlay"] .sarah-right-header[sarah-position-type="fixed"] {
+    margin-left: 0px;
+	padding-right: 0;
+}
+
+#sarahapp-wrapper[sarah-device-type="phone"].sarah-hide-lpanel #sarah-header[sarah-lpanel-effect="push"] .sarah-right-header[sarah-position-type="relative"] {
+    margin-left: 0px;
+	padding-right: 0;
+}
+#sarahapp-wrapper[sarah-device-type="phone"].sarah-hide-lpanel #sarah-header[sarah-lpanel-effect="push"] .sarah-right-header[sarah-position-type="fixed"] {
+    margin-left: 0px;
+	padding-right: 0;
+}
+#sarahapp-wrapper[sarah-device-type="phone"] #sarah-header[sarah-lpanel-effect="push"] .sarah-right-header[sarah-position-type="relative"] {
+    margin-left: 0px;
+	padding-right: 0;
+}
+#sarahapp-wrapper[sarah-device-type="phone"] #sarah-header[sarah-lpanel-effect="push"] .sarah-right-header[sarah-position-type="fixed"] {
+    margin-left: 0px;
+	padding-right: 0;
+}
+/****************************** Theme Style for Phone Close here **********************************/
+
+/*******************************main container Style Close Here ***********************************/
+
+/****************************** Default Theme Style Close ******************************************/
+
+/*Boxed Theme Layout Style Start*/
+body[theme-layout="box-layout"] #sarahapp-wrapper[sarah-device-type="desktop"] {
+	width:96%;
+	margin:0 auto;
+}
+/*Boxed Theme Layout Style Close*/
+ 
+/*Theme Background Color in Start */
+body[theme-layout="box-layout" sarah-nav-placement="right"] #sarahapp-wrapper[sarah-device-type="desktop"]{
+	margin:0 auto;
+}
+body[theme-bg="bg1"]{
+	 background-image: url("../images/bg1.png");
+}
+body[theme-bg="bg2"]{
+	 background-image: url("../images/bg2.png");
+}
+body[theme-bg="bg3"]{
+	 background-image: url("../images/bg3.png");
+}
+body[theme-bg="bg4"]{
+	 background-image: url("../images/bg4.png");
+}
+body[theme-bg="bg5"]{
+	 background-image: url("../images/bg5.png");
+}
+body[theme-bg="bg6"]{
+	 background-image: url("../images/bg6.png");
+}
+body[theme-bg="bg7"]{
+	 background-image: url("../images/bg7.png");
+}
+body[theme-bg="bg8"]{
+	 background-image: url("../images/bg8.png");
+}
+body[theme-bg="bg9"]{
+	 background-image: url("../images/bg9.png");
+}
+/*Theme Background Color in Close */
+
+
+

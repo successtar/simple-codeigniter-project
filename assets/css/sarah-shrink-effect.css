@@ -1,0 +1,37 @@
+/*################ Theme Header With shrink Effect Start #####################*/
+#sarah-header[sarah-lpanel-effect="shrink"] .sarah-right-header[sarah-position-type="relative"] {
+  margin-left: 230px;
+   padding-right: 0;
+}
+#sarah-header[sarah-lpanel-effect="shrink"].sarah-minimized-lpanel .sarah-right-header[sarah-position-type="relative"] {
+  margin-left: 50px;
+  padding-right: 0;
+}
+#sarah-header[sarah-lpanel-effect="shrink"] .sarah-right-header[sarah-position-type="fixed"] {
+	padding-right: 230px;
+	margin-left: 230px;
+}
+#sarah-header[sarah-lpanel-effect="shrink"].sarah-minimized-lpanel .sarah-right-header[sarah-position-type="fixed"] {
+padding-right: 50px;
+	margin-left: 50px;
+}
+#sarah-header[sarah-lpanel-effect="shrink"] .sarah-right-header[sarah-position-type="relative"] .sarah-sidebar-toggle a:after {
+    margin-left: 0px;
+}
+#sarah-header.sarah-minimized-lpanel[sarah-lpanel-effect="shrink"] .sarah-right-header[sarah-position-type="relative"] .sarah-sidebar-toggle a:after {
+    margin-left: 0px;
+}
+#sarah-header[sarah-lpanel-effect="shrink"] .sarah-right-header[sarah-position-type="fixed"] .sarah-sidebar-toggle a:after {
+    left: 0px;
+}
+#sarah-header.sarah-minimized-lpanel[sarah-lpanel-effect="shrink"] .sarah-right-header[sarah-position-type="fixed"] .sarah-sidebar-toggle a:after {
+    left: 0px;
+}
+
+#sarahapp-container[sarah-lpanel-effect="shrink"] #main-content{
+	margin-left: 230px;
+}
+#sarahapp-container[sarah-lpanel-effect="shrink"].sarah-minimized-lpanel #main-content{
+	margin-left: 50px;
+}
+/*################ Theme Header With shrink Effect Close #####################*/

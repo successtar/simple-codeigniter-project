@@ -1,0 +1,37 @@
+/*################ Theme Header With Content Overlay Effect Start #####################*/
+#sarah-header[sarah-lpanel-effect="overlay"] .sarah-right-header[sarah-position-type="fixed"] {
+  margin-left:  0px;
+  padding-right: 0px;
+}
+#sarah-header[sarah-lpanel-effect="overlay"].sarah-minimized-lpanel .sarah-right-header[sarah-position-type="fixed"] {
+    margin-left:  50px;
+    padding-right: 50px;
+}
+#sarah-header[sarah-lpanel-effect="overlay"] .sarah-right-header[sarah-position-type="relative"] {
+  margin-left: 0px;
+}
+#sarah-header.sarah-minimized-lpanel[sarah-lpanel-effect="overlay"] .sarah-right-header[sarah-position-type="relative"] {
+  margin-left: 50px;   
+}
+#sarah-header[sarah-lpanel-effect="overlay"] .sarah-right-header[sarah-position-type="relative"] .sarah-sidebar-toggle a:after {
+    margin-left:  230px;
+	
+}
+#sarah-header.sarah-minimized-lpanel[sarah-lpanel-effect="overlay"] .sarah-right-header[sarah-position-type="relative"] .sarah-sidebar-toggle a:after {
+     margin-left: 0px;
+}
+#sarah-header[sarah-lpanel-effect="overlay"] .sarah-right-header[sarah-position-type="fixed"] .sarah-sidebar-toggle a:after {
+  margin-left:  230px;
+}
+#sarah-header.sarah-minimized-lpanel[sarah-lpanel-effect="overlay"] .sarah-right-header[sarah-position-type="fixed"] .sarah-sidebar-toggle a:after {
+    margin-left:  0px; 
+}
+
+
+#sarahapp-container[sarah-lpanel-effect="overlay"] #main-content{
+	 margin-left: 50px;
+}
+#sarahapp-container[sarah-lpanel-effect="overlay"].sarah-minimized-lpanel #main-content{
+	 margin-left: 50px;
+}
+/*################ Theme Header With Content Overlay Effect Close #####################*/

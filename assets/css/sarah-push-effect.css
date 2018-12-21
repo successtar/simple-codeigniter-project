@@ -1,0 +1,42 @@
+/*################ Theme Header With Content Push Effect Start #####################*/
+#sarah-header[sarah-lpanel-effect="push"] .sarah-right-header[sarah-position-type="fixed"] {
+    margin-left: 230px;
+    margin-right: -230px;
+	padding-right:0px
+}
+#sarah-header.sarah-minimized-lpanel[sarah-lpanel-effect="push"] .sarah-right-header[sarah-position-type="fixed"] {
+     margin-left: 50px;
+	margin-right: 0px;
+	padding-right:50px
+}
+#sarah-header[sarah-lpanel-effect="push"] .sarah-right-header[sarah-position-type="relative"] {
+    margin-left: 230px;
+    margin-right: -230px;
+}
+#sarah-header[sarah-lpanel-effect="push"].sarah-minimized-lpanel .sarah-right-header[sarah-position-type="relative"] {
+    margin-left: 50px;
+	margin-right: 0px;
+}
+#sarah-header[sarah-lpanel-effect="push"] .sarah-right-header[sarah-position-type="relative"] .sarah-sidebar-toggle a:after {
+ margin-left:  0px;
+}
+#sarah-header.sarah-minimized-lpanel[sarah-lpanel-effect="push"] .sarah-right-header[sarah-position-type="relative"] .sarah-sidebar-toggle a:after {
+ margin-left:  0px;
+}
+#sarah-header[sarah-lpanel-effect="push"] .sarah-right-header[sarah-position-type="fixed"] .sarah-sidebar-toggle a:after {
+    margin-left:  0px;
+}
+#sarah-header.sarah-minimized-lpanel[sarah-lpanel-effect="push"] .sarah-right-header[sarah-position-type="fixed"] .sarah-sidebar-toggle a:after {
+    margin-left:  0px;
+}
+
+#sarahapp-container[sarah-lpanel-effect="push"] #main-content{
+	margin-left: 230px;
+	margin-right: -230px;
+}
+#sarahapp-container[sarah-lpanel-effect="push"].sarah-minimized-lpanel #main-content{
+	 margin-left: 50px;
+     margin-right: 0px;	 
+}
+
+/*################ Theme Header With Content Push Effect Close #####################*/
